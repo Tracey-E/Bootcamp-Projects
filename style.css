@@ -15,6 +15,8 @@ h2 {
 }
 
 .links {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   margin-top: 50px;
   padding: 5em;
