@@ -87,8 +87,9 @@ function div() {
 }
 
 function getName(firstName, lastName) {
-  return firstName + ' ' + lastName;
+  return firstName + " " + lastName;
 }
-const name1 = getName('Tracey', 'Edwards');
+
+const name1 = getName("Tracey", "Edwards");
 
 console.log(name1);

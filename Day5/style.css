@@ -228,15 +228,14 @@
     display: flex;
     width: 100%;
     background-color: #96eab7;
-    
   }
   .image1 {
     display: flex;
     width: 50%;
     height: 40%;
     justify-content: flex-start;
-    border: 3px solid black;
-    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2) ;
+    outline: 3px solid black;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
   }
   .left p {
     display: flex;
@@ -261,11 +260,11 @@
   .image2 {
     display: flex;
     height: 40%;
-    width: 55%;
+    width: 50%;
     justify-self: flex-end;
 
-    border: 2px solid black;
-    box-shadow: -20px 9px 20px rgba(14, 13, 13, 0.2) 
+    outline: 2px solid black;
+    box-shadow: -20px 9px 20px rgba(14, 13, 13, 0.2);
   }
   /*--bottom--*/
   /*--beach--*/
@@ -290,21 +289,19 @@
     display: flex;
     align-self: center;
     justify-content: center;
-   padding: 0.7em;
+    padding: 0.7em;
     text-align: center;
   }
   .bot-left {
     display: flex;
     width: 50%;
-    border: 2px solid black;
+    outline: 2px solid black;
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
     justify-self: flex-start;
     align-self: flex-start;
   }
   img {
     width: 100%;
-    height: 60%;
-    contain: content;
   }
   img:hover {
     transform: scale(1.5);

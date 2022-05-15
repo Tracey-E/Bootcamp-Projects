@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#demo {
+  display: flex;
+  width: 200px;
+  height: 100px;
+}
+
+#numbers {
+  display: flex;
+  background-color: rgb(143, 154, 155);
+  color: azure;
+  height: 5em;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+/*form*/
+.create-car{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30 rem ;
+    background-color: rgb(143, 154, 155);
+}
