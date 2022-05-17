@@ -1,0 +1,9 @@
+.active{
+    background-color: #dd1313;
+    color: antiquewhite;
+}
+
+.highlighted{
+    outline: 3px slateblue solid;
+    margin: 2em;
+}

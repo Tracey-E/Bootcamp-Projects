@@ -1,0 +1,344 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 0.5em;
+  }
+  /* header content*/
+  header {
+    background-color: #7b99fa;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  header h1 {
+    color: red;
+    text-shadow: #000 1px 2px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  nav {
+    display: none;
+    width: 20%;
+    height: 50%;
+  }
+
+  .search {
+    display: flex;
+    width: 98vw;
+    height: 5%;
+    justify-content: center;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  .search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #ecf2f5;
+    color: #000;
+    font-size: 20px;
+    padding: 0.5em;
+  }
+  /* --main-body start*/
+
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    background-color: #96eab7;
+  }
+  .image-container {
+    width: 100%;
+    height: 50%;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    background-color: #53cdd8;
+  }
+  .image2 {
+    width: 100%;
+    height: 50%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    contain: cover;
+  }
+  p {
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+
+  /* --footer start*/
+  footer {
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    width: 100%;
+    background-color: #7b99fa;
+    color: rgb(13, 14, 14);
+  }
+  .copy {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    font-size: larger;
+  }
+  .gitLink {
+    display: flex;
+    color: azure;
+    justify-content: flex-end;
+  }
+  .gitLink img {
+    width: 100%;
+    height: 100%;
+  }
+  .gitLink a {
+    display: flex;
+    width: 30%;
+  }
+}
+
+/** desktop settings*/
+@media screen and (min-width: 768px) {
+  body {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 0.5em;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    background-color: #7b99fa;
+    width: 100%;
+    height: 20%;
+  }
+  header h1 {
+    color: rgb(12, 12, 12);
+    font-size: 50px;
+    text-shadow: rgb(250, 247, 247) 1px 2px;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+  }
+  nav {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-around;
+    width: 20%;
+    height: 40%;
+    margin-right: 1em;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    color: black;
+  }
+  nav ul li {
+    display: flex;
+    margin: 1em;
+
+    font-size: larger;
+    font-weight: bolder;
+  }
+  nav ul li a:hover {
+    color: red;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    width: 98%;
+    border: 2px solid black;
+  }
+  .search input {
+    width: 99.5%;
+    height: 100%;
+    outline: 2px solid black;
+  }
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  /*--forest--*/
+  .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40%;
+
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  /*-- image container*/
+  .image-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    border: 1px dashed black;
+    padding: 0.8em;
+  }
+  /*--images--*/
+
+  /*top left*/
+  .left {
+    display: flex;
+    width: 100%;
+    background-color: #96eab7;
+  }
+  .image1 {
+    display: flex;
+    width: 50%;
+    height: 40%;
+    justify-content: flex-start;
+    outline: 3px solid black;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .left p {
+    display: flex;
+    text-align: center;
+    align-self: center;
+    padding: 0.8em;
+  }
+  /* top right*/
+  .top-right {
+    display: flex;
+    width: 100%;
+    background-color: #96eab7;
+  }
+  .top-right p {
+    display: flex;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    padding: 0.5em;
+    width: 50%;
+  }
+  .image2 {
+    display: flex;
+    height: 40%;
+    width: 50%;
+    justify-self: flex-end;
+
+    outline: 2px solid black;
+    box-shadow: -20px 9px 20px rgba(14, 13, 13, 0.2);
+  }
+  /*--bottom--*/
+  /*--beach--*/
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    background-color: #53cdd8;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageB {
+    display: flex;
+    height: 40%;
+    width: 100%;
+
+    align-self: center;
+    justify-content: center;
+  }
+  .imageB p {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 0.7em;
+    text-align: center;
+  }
+  .bot-left {
+    display: flex;
+    width: 50%;
+    outline: 2px solid black;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+  img {
+    width: 100%;
+  }
+  img:hover {
+    transform: scale(1.5);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    width: 100%;
+    background-color: #7b99fa;
+    color: rgb(18, 19, 19);
+  }
+  .copy {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    font-size: larger;
+    margin-left: 1em;
+  }
+  .gitLink {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+  .gitLink a {
+    display: flex;
+    width: 30%;
+    height: 20%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+  }
+  .gitLink img {
+    width: 40%;
+    height: 20%;
+  }
+}

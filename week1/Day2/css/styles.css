@@ -1,0 +1,37 @@
+body {
+  overflow: auto;
+}
+
+.one {
+  width: 100px;
+  height: 300px;
+  text-align: center;
+}
+
+#two {
+  background-color: red;
+}
+
+.secondP {
+  color: orange;
+}
+
+.sectioning {
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+}
+
+.sectionOne {
+display: inline-flex;
+  background-color: rgb(123, 177, 224);
+  width: 100px;
+  height: 100px;
+ 
+}
+.sectionTwo {
+  display: inline-flex;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}

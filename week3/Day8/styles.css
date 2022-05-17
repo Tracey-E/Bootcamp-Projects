@@ -1,0 +1,81 @@
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  margin: 10em;
+}
+.forms {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+}
+#fortune {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background-color: rgb(20, 20, 20);
+  color: rgb(231, 22, 22);
+  font-size: 2em;
+  font-style: italic;
+  padding: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 3px solid red;
+}
+#fortune .buttons {
+  font-size: large;
+  font-style: italic;
+  width: 5em;
+  height: 1.5em;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+#puppy {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  margin-top: 1em;
+  background-color: rgb(97, 94, 94);
+  justify-content: center;
+  align-items: center;
+  border: 3px solid blue;
+  color: blue;
+  font-size: 1.5em;
+}
+#puppy input {
+  width: 9em;
+  height: 2em;
+}
+.butts {
+  display: flex;
+  flex-direction: row;
+}
+#puppy button {
+  font-size: larger;
+  height: 2em;
+  width: 6em;
+  font-size: 1em;
+}
+
+#arrays {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background-color: rgb(97, 94, 94);
+  color: rgb(241, 226, 226);
+  margin-top: 1.5em;
+  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+}

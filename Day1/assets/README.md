@@ -1,1 +1,0 @@
-# These are all the different projects i am creating whilst doing a 12 week web development bootcamp

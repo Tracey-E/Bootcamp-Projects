@@ -1,0 +1,73 @@
+/* main body style*/
+body {
+  background-color: #0f0f0f;
+  margin: 0%;
+  width: 100%;
+}
+
+/*card background*/
+.card {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(146, 155, 241), rgb(204, 84, 48));
+  border: 5px ridge rgb(17, 16, 16);
+  outline: 20px solid white;
+}
+/*card header*/
+.card-header {
+  color: rgb(219, 22, 22);
+  height: 4em;
+  font-size: 20px;
+  font-style: italic;
+  height: 4em;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+/*card img*/
+img {
+  height: 220px;
+  width: 170px;
+  border: 1px solid white;
+}
+/*bottom card text area*/
+.cardText {
+  flex-direction: row;
+  border: 4px solid rgb(221, 138, 112);
+  align-self: flex-start;
+  width: 70%;
+  border-radius: 0px 45px 45px 0px;
+  outline: 1px solid black;
+}
+.cardText ul {
+  list-style-type: none;
+  margin-left: 0%;
+  padding-left: 0%;
+}
+.cardText li {
+  flex-direction: row;
+  outline: 1px solid black;
+  align-self: flex-start;
+  width: 10em;
+  text-align: left;
+  background-color: white;
+  word-spacing: 2em;
+}
+
+.star {
+  background-image: url("../../Day3/assests/Star_icon_1.png"),
+    url("../../Day3/assests/Star_icon_1.png"),
+    url(../../Day3/assests/Star_icon_1.png),
+    url(../../Day3/assests/Star_icon_1.png),
+    url(../../Day3/assests/Star_icon_1.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+  background-position: center, right, bottom 0px right 18px,
+    bottom 0px right 35px, bottom 0px right 53px;
+}

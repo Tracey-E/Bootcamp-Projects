@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>shoppingCart</title>
+  </head>
+  <body>
+    <header>
+     
+    </header>
+    <div id="itemsContainer">
+
+      <div class="itemBox" id="item1">
+        <h3 id="one">Box of biscuits</h3>
+        <img src="assets/item1.jpg" alt="item1" />
+      <div id="cost"> £
+          <h4 id="price">10.00</h4>
+      </div> 
+      </div>
+        <button class="itemButton" type="button" id="item1" onclick="addToCart(e)">Add to Cart</button>
+     
+      <div class="itemBox" id="item2">
+        <h3 id="two" >Box of cupcakes</h3>
+          <img src="assets/item2.jpg" alt="item2" />
+            <div id="cost">  £
+             <h4 id="price">6.00</h4>
+            </div>
+      </div>
+        <button class="itemButton" type="button" id="item2" onclick="addToCart(e)">Add to Cart</button>
+
+      <div class="itemBox" id="item3">
+        <h3 id="three" >box of brownies</h3>
+          <img src="assets/item3.jpg" alt="item3" />
+            <div id="cost">   £  
+              <h4 id="price">3.00</h4>
+            </div>
+      </div>
+      <button class="itemButton" type="button" id="item3" onclick="addToCart(e)">Add to Cart</button>
+
+      <div class="itemBox" id="item4">
+        <h3 id="four">Box of macaroons</h3>
+          <img src="assets/item4.jpg" alt="item4" />
+            <div id="cost">   £
+              <h4 id="price">6.00</h4>
+            </div>
+      </div>
+        <button class="itemButton" type="button" id="item4" onclick="addToCart(e)">Add to Cart</button>
+       
+
+      <div class="itemBox" id="item5">
+        <h3 id="five">Lemon meringue</h3>
+          <img src="assets/item5.jpg" alt="item5" />
+            <div id="cost">   £
+              <h4 id="price">7.00</h4>
+            </div>
+      </div>
+        <button class="itemButton" type="button" id="item5" onclick="addToCart(e)">Add to Cart</button>
+      
+
+      <div class="itemBox" id="item6">
+        <h3 id="six">Tiramisu</h3>
+          <img src="assets/item6.jpg" alt="item6" />
+            <div id="cost">  £
+               <h4 id="price">5.00</h4>
+            </div>
+       </div>
+         <button class="itemButton" type="button" id="item6" onclick="addToCart(e)">Add to Cart</button>
+  </div>
+    <div id="cartContainer">
+        <div id ="cartItems">
+           <div id="CartItem">Name </div>
+
+               <div id="amount">Quantity</div>
+            
+        <div id="cartPrice">Price</div>
+
+        
+  
+       <div id="total">
+         <p>Total: £0.00</p>
+       </div>
+     <button id="checkout">Checkout</button>
+    </div>
+  </body>
+</html>

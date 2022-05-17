@@ -1,0 +1,30 @@
+* {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  background-image: url(../../Day1/assets/GitHub-Logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition: transform 1s linear;
+  transform: translatex(-100%);
+  padding: 1rem;
+}
+
+.container:hover .box {
+  transform: translatex(0);
+}
