@@ -1,0 +1,46 @@
+body{
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#box1{
+    display: flex;
+    width: 90%;
+    height: 20%;
+    background-color: rgb(231, 139, 105);
+    margin: 2em;
+}
+#box1 input{
+    width: 20%;
+    height:25%;
+}
+#outputBox1{
+    display: flex;
+    width: 90%;
+    height: 20%;
+    background-color: rgb(190, 170, 162);
+}
+
+#box2{
+    display: flex;
+    width: 90%;
+    height: 30%;
+    background-color: rgb(175, 104, 206);
+    margin: 2em;
+}
+#box2 button{
+    width: 20%;
+    height:25%;
+}
+#outputBox2 {
+    display: flex;
+    width: 90%;
+    height: 30%;
+    background-color: rgb(194, 163, 152);
+}
+button:hover{
+background-color: black;
+color: white;
+}
