@@ -21,7 +21,7 @@ function createQuantityButtons(id) {
   let amount = document.getElementById("amount");
   /**add all to the document */
   let amountDiv = document.createElement("div");
-  amountDiv.id = "amountDiv";
+  //amountDiv.id = "amountDiv";
   amount.appendChild(amountDiv);
   amountDiv.appendChild(minusButton);
   amountDiv.appendChild(quantityCounter);
@@ -30,7 +30,6 @@ function createQuantityButtons(id) {
 }
 
 function addToCart(e) {
-  console.log(e.target.id);
   let item = e.target.id;
   let itemToAdd = document.getElementById(item);
   console.log(itemToAdd);
@@ -43,18 +42,24 @@ function addToCart(e) {
   let cartItemAdd = document.getElementById("CartItem");
   console.log(cartItemAdd);
   /**create new li element in cartItemAdd to add name */
-  let newItemName = document.createElement("li");
-  newItemName.innerText = itemName;
-  cartItemAdd.appendChild(newItemName);
-  /**create new li element in cartItemPrice to add price */
-  let newPrice = document.createElement("li");
-  newPrice.innerText = ItemPrice;
-  newPrice.id = itemId;
-  let cartItemPrice = document.getElementById("cartPrice");
-  cartItemPrice.appendChild(newPrice);
+  if (cartItemAdd.innerText.indexOf(itemName) >= 0) {
+    alert("Item already in cart you can change the quantity in the cart");
+  } else {
+    let newItemName = document.createElement("li");
+    newItemName.className = "item";
+    newItemName.innerText = itemName;
+    newItemName.id = itemId;
+    cartItemAdd.appendChild(newItemName);
+    /**create new li element in cartItemPrice to add price */
+    let newPrice = document.createElement("li");
+    newPrice.innerText = ItemPrice;
+    newPrice.id = itemId;
+    let cartItemPrice = document.getElementById("cartPrice");
+    cartItemPrice.appendChild(newPrice);
 
-  createQuantityButtons(itemId);
-  total();
+    createQuantityButtons(itemId);
+    total();
+  }
 }
 /**function that when a minus or plus button is clicked
  * the nextElementSibling input changes to represent */
@@ -70,28 +75,66 @@ function minusItemCount(e) {
     e.target.nextElementSibling.innerHTML = quantity;
     for (let i = 0; i < price.length; i++) {
       if (price[i].id == PriceId) {
-        let value = price[i].innerHTML;
-        let newValue = value / 2;
+        if (quantity == 0) {
+          price[i].innerText = "0";
+        } else {
+          let value = price[i].innerHTML;
+          let newValue = value / 2;
+          price[i].innerHTML = newValue;
+        }
+      }
+    }
+    total();
+  }
+}
+/** to count up the items */
+function addItemCount(e) {
+  const costs = {
+    one: 10,
+    two: 6,
+    three: 3,
+    four: 6,
+    five: 7,
+    six: 5,
+  };
+  console.log("plus");
+  let PriceId = e.target.parentElement.id;
+  console.log(PriceId);
+  let price = document.querySelectorAll("#cartPrice li");
+  let quantity = e.target.previousElementSibling.innerHTML;
+  console.log(quantity);
+  quantity++;
+  for (let i = 0; i < price.length; i++) {
+    if (price[i].id == PriceId) {
+      if (price[i].innerHTML == "0") {
+        /**use price[i].id to get new value from variable that matches the id */
+
+        for (const [key, value] of Object.entries(costs)) {
+          console.log(key);
+          console.log(value);
+          if (PriceId == key) {
+            console.log(value);
+            let newValue = value;
+            price[i].innerHTML = newValue;
+          }}
+        
+      } else {
+        let itemToAdd = document.getElementById(PriceId);
+      console.log(itemToAdd);
+      
+        let value = itemToAdd.nextElementSibling.nextElementSibling.firstElementChild.innerText;
+       console.log(value);
+        let newValue = value * quantity;
         price[i].innerHTML = newValue;
       }
     }
+  
   }
+  e.target.previousElementSibling.innerHTML = quantity;
   total();
 }
 
-function addItemCount(e) {
-  console.log("plus");
-  let PriceId = e.target.parentElement.id;
-  let price = document.querySelectorAll("#cartPrice li");
-  for (let i = 0; i < price.length; i++) {
-    if (price[i].id == PriceId) {
-      let value = price[i].innerHTML;
-      let newValue = value * 2;
-      price[i].innerHTML = newValue + ".00";
-    }
-  }
-  total();
-}
+/** function to calculate the total price */
 
 function total() {
   let price = document.querySelectorAll("#cartPrice li");
@@ -100,5 +143,41 @@ function total() {
     total += parseFloat(price[i].innerHTML);
   }
   let grandTotal = document.getElementById("total");
-  grandTotal.innerHTML = "£" + total;
+  grandTotal.innerHTML = "Total cost is:  £" + total;
+}
+/**this will produce a written list of the items
+ * how many of each items and the total cost of all item  */
+function checkout() {
+  let items = document.getElementsByClassName("item ");
+  let itemQuantity = document.querySelectorAll(" span");
+  console.log(itemQuantity);
+  let prices = document.querySelectorAll("cartPrice li");
+  let total = document.getElementById("total");
+  let list = document.createElement("ul");
+  let itemsInCart = document.createElement("p");
+  let quantity = 0;
+  for (let i = 0; i < items.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.innerText = items[i].innerText;
+    list.append(listItem);
+  }
+  for (let i = 0; i < itemQuantity.length; i++) {
+    //let quantity= itemQuantity[i].innerText;
+
+    let num = parseInt(itemQuantity[i].innerText);
+
+    console.log(num);
+    quantity = quantity + num;
+    console.log(quantity);
+  }
+  itemsInCart.append("You have " + quantity + " item(s) in your cart");
+  let receipt = document.getElementById("receiptItems");
+  receipt.appendChild(list);
+  receipt.appendChild(itemsInCart);
+  let totalCost = document.createElement("li");
+  totalCost.id = "totalCost";
+  totalCost.innerText = "Total Cost is: " + total.innerText;
+  receipt.appendChild(totalCost);
+  receipt.append("Thank you for shopping with us");
+  receipt.style.visibility = "visible";
 }
