@@ -156,20 +156,29 @@ function checkout() {
   let list = document.createElement("ul");
   let itemsInCart = document.createElement("p");
   let quantity = 0;
-  for (let i = 0; i < items.length; i++) {
-    let listItem = document.createElement("li");
-    listItem.innerText = items[i].innerText;
-    list.append(listItem);
-  }
-  for (let i = 0; i < itemQuantity.length; i++) {
-    //let quantity= itemQuantity[i].innerText;
 
-    let num = parseInt(itemQuantity[i].innerText);
+  
+
+  for (let i = 0; i < items.length; i++) {
+    for(let x = 0; x < itemQuantity.length; x++){
+      if(items[i].id == itemQuantity[x].previousElementSibling.parentElement.id 
+        && itemQuantity[x].innerHTML > 0){
+          
+         
+        
+
+        let listItem = document.createElement("li");
+        listItem.innerText = items[i].innerText;
+        list.append(listItem);
+        let num = parseInt(itemQuantity[i].innerText);
 
     console.log(num);
     quantity = quantity + num;
     console.log(quantity);
-  }
+      }
+      }
+    }
+   
   itemsInCart.append("You have " + quantity + " item(s) in your cart");
   let receipt = document.getElementById("receiptItems");
   receipt.appendChild(list);

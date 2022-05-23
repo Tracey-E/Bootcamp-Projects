@@ -1,0 +1,82 @@
+body{
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* fizz-bang styles*/
+.fizz-bang{
+    display: flex;
+    flex-direction: column;
+    
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+    color: #f2f2f2;
+    background-color: #ff4d4d;
+    padding: 10px;
+    margin: 0;
+    text-shadow: #0f0e0e 2px 3px;
+    width:100vw;
+    height:3em;
+}
+button{
+    display: flex;
+   
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width:5em;
+    height:3em;
+
+}
+#output{
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width:10em;
+    height:auto;
+}
+/* math magic styles*/
+
+.math-magic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#math-output{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 15em;
+    overflow-y: auto;
+    background-color: #0f0e0e;
+    color: #f2f2f2;
+}
+p{
+    text-align: center;
+    font-size: 1.5em;
+    color: #f2f2f2;
+    background-color: #4034e2;
+    padding: 10px;
+    margin: 0;
+    text-shadow: #0f0e0e 2px 3px;
+    width:100vw;
+    height:3em;
+}
