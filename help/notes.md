@@ -51,3 +51,13 @@ classList.remove()      USED TO REMOVE A CLASS
 
 includes()          USED TO SEE IF A GIVEN ITEM INCLUDES("SOMETHING")
 indexOf()        USED TO FIND THE POSTION OF ITEM
+
+
+# relative is used to get the position of an element relative to the 
+# viewport and will scroll with the page and effected by elements on page.
+
+# absolute is used to get the position of an element relative to the 
+# document itself (the page) and will scroll up with page.
+
+# fixed is used to get the position of an element relative 
+# to the viewport and doesn't scroll.

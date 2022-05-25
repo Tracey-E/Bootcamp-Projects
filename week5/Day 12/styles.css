@@ -1,0 +1,236 @@
+body {
+  overflow-x: hidden;
+  height: 300vh;
+  overflow-y: auto;
+}
+/*nav animation*/
+.nav {
+  margin-top: 5rem;
+  position: absolute;
+  width: 20rem;
+  height: 50%;
+  right: -20rem;
+  top: 0rem;
+  background-image: url("./assets/raychel-sanner-1cJXplTxrmI-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav.active {
+  right: 0;
+  z-index: 1;
+  position: fixed;
+  transition: 1.5s linear;
+}
+.nav.unActive {
+  position: fixed;
+  transition: right 1.5s linear;
+  right: -20rem;
+}
+.nav .toggle {
+  top: 0.5rem;
+  right: 0rem;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav li {
+  list-style: none;
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+  border: 3px solid red;
+  width: 3em;
+  padding: 0.2em;
+  transition: 0.5s linear;
+  text-align: center;
+}
+.nav li:hover {
+  background-color: rgb(21, 21, 22);
+  color: rgb(247, 236, 236);
+  margin-left: 6rem;
+  text-align: center;
+}
+
+.toggle {
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+.toggle:hover {
+  background-color: rgb(21, 21, 22);
+  color: rgb(247, 236, 236);
+
+  text-align: center;
+}
+/*box animation*/
+
+#box {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 5em;
+  background-color: red;
+  animation: move 6s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0);
+    background-color: aqua;
+  }
+  50% {
+    transform: translate(100px, 100px);
+    background-color: chartreuse;
+  }
+  75% {
+    transform: translate(0, 100px);
+    background-color: blue;
+  }
+  100% {
+    transform: translate(0, 0);
+    background-color: red;
+  }
+}
+
+/*header animation*/
+.header {
+  padding: 1rem;
+  height: 18rem;
+  background: linear-gradient(rgb(240, 50, 50), white, rgb(41, 41, 248));
+  align-items: center;
+}
+.name {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 0.5rem;
+  font-size: 10rem;
+  align-self: center;
+}
+
+.chk {
+  width: 5rem;
+  margin-top: 0rem;
+  font-weight: bolder;
+}
+.hidden {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+}
+.a-bounce {
+  --animdur: 2s;
+  --animn: bounce;
+  --animdir: alternate-reverse;
+  --animic: infinite;
+}
+
+[data-animation] {
+  animation: var(--animn, none) var(--animdur, 0s) var(--animtf, linear)
+    var(--animdel, 0s) var(--animic, infinite) var(--animdir, alternate)
+    var(--animfm, none) var(--animps, running);
+}
+[data-animation-pause]:checked ~ [data-animation] {
+  --animps: paused;
+}
+[data-animation-pause]:checked + label::before {
+  background-color: cornflowerblue;
+}
+
+@keyframes bounce {
+  from {
+    margin-top: 4.5%;
+  }
+  0% {
+    color: rgb(240, 50, 50);
+    opacity: 100%;
+  }
+  50% {
+    color: rgb(10, 10, 10);
+    opacity: 90%;
+  }
+  100% {
+    color: rgb(41, 41, 248);
+    opacity: 80%;
+  }
+}
+/*three box/balls animation*/
+#box1,
+#box2,
+#box3 {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 5em;
+  background-color: red;
+margin-top: 1em;
+  border: 5px solid black;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px black;
+}
+
+@keyframes slide {
+  from {
+    left: 0;
+    background-color: yellow;
+  }
+  25% {
+    transform: translate(0px, 100px);
+    background-color: aqua;
+  }
+  50% {
+    transform: translate(0px, -80px);
+    background-color: chartreuse;
+  }
+  75% {
+    transform: translate(0px, 100px);
+    background-color: blue;
+  }
+  to {
+    left: 100%;
+    background-color: red;
+  }
+}
+#box1 {
+  animation: slide 10s linear infinite;
+}
+#box2 {
+  animation: slide 10s ease-in-out infinite;
+}
+
+#box3 {
+  animation: slide 10s linear infinite;
+}
+/*light dark page toggle*/
+
+.dark{
+  background-color: rgb(21, 21, 22);
+  color: rgb(247, 236, 236);
+}
+.light{
+  background-color: white;
+  color: black;
+}
+.blue{
+  background-color: rgb(41, 41, 248);
+  color: rgb(247, 236, 236);
+}
+.yellow{
+  background-color: rgb(213, 216, 25);
+  color: rgb(247, 236, 236);
+}
+.red{
+  background-color: rgb(240, 50, 50);
+  color: rgb(247, 236, 236);
+}

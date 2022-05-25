@@ -1,0 +1,61 @@
+h1 {
+  transition: background-color 2s, color 2s, border 2s;
+}
+
+h1:hover {
+  background-color: red;
+  color: white;
+  border: 5px solid blue;
+}
+
+.box {
+  margin-top: 5rem;
+  position: absolute;
+  width: 20rem;
+  height: 100%;
+  left: -20rem;
+  transition: 0.5s;
+  background-color: rgb(37, 113, 212);
+}
+.box.active {
+  left: 0 ;
+  z-index: 1;
+}
+.box .toggle {
+  position: absolute;
+  top: 0.5rem;
+  left: 20rem;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.box ul{
+    display: flex;
+    flex-direction: column;
+}
+.box li{
+    list-style: none;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    border:3px solid red;
+    width:5em;
+    padding: 1em;
+    padding-left: 2em;
+    transition: 0.5s linear;
+}
+.box li:hover{
+    background-color: rgb(21, 21, 22);
+    color: rgb(247, 236, 236);
+    padding-left: 5rem;
+    
+    
+}
+
+.toggle span {
+  width: 3rem;
+  height: 0.5rem;
+  display: block;
+  margin-top: 0.5rem;
+  background-color: rgb(15, 15, 15);
+  color: black;
+}
