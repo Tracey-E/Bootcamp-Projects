@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Homework</title>
+  </head>
+  <body>
+    <h1>Create an animated picture slideshow</h1>
+
+    <div id="outer-container">
+      <div id="inner-container">
+        <button type="button" onclick="prev()" id="prev">&lt;</button>
+
+        <figcaption id="item1" class="one active">
+          <img
+            src="../../week2/Day4/assets/52739785_889091018149293_6734193679981871104_n.jpg"
+            alt=""
+            srcset=""
+          />
+        </figcaption>
+        <figcaption id="item2" class="two">
+          <img
+            src="../../week2/Day4/assets/57449474_921476974910697_3848769513055059968_n.jpg"
+            alt=""
+            srcset=""
+          />
+        </figcaption>
+        <figcaption id="item3" class="three">
+          <img
+            src="../../week2/Day4/assets/65638988_969306606794400_9030392164038737920_n.jpg"
+            alt=""
+            srcset=""
+          />
+        </figcaption>
+        <figcaption id="item4" class="four">
+          <img
+            src="../../week2/Day4/assets/71261611_1028713744187019_2813332230330384384_n.jpg"
+            alt=""
+            srcset=""
+          />
+        </figcaption>
+          
+        <button type="button" onclick="next()" id="next">&gt;</button>
+        <p>count = <span>1</span>/4</p>
+      </div>
+      
+    </div>
+  </body>
+</html>

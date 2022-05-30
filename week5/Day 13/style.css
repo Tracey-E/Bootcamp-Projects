@@ -1,7 +1,13 @@
 
 :root{
-    --highlight-1:red;
-    --highlight-2:green;
+
+    --pallette-color-1: #cd17e6  ;
+    --pallette-color-2: #bed637;
+    --pallette-color-3: #007bff;
+    --highlight-1:var(--pallette-color-1);
+    --highlight-2:var(--pallette-color-2);
+    --highlight-3:var(--pallette-color-3);
+    --fontWeight-1:bolder;
 }
 
 
@@ -27,4 +33,10 @@ h2{
 }
 h3{
     color: var(--highlight-2);
+}
+
+p{
+    font-size: larger;
+    color: var(--highlight-3);
+    font-weight: var(--fontWeight-1);
 }
