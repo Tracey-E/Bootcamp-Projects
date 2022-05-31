@@ -9,6 +9,24 @@
     <title>Day 14</title>
 </head>
 <body>
-    
+    <select onChange="search(this.value)">
+        <option>--Select one--</option>
+        <option value="all">All projects</option>
+        <option value="javascript">Javascript</option>
+        <option value="react">React</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+       
+
+    </select>
+    <ul>
+        <li data-search="html css">item 1</li>
+        <li data-search="react html css" >item 2</li>
+        <li data-search="javascript" >item 3</li>
+        <li data-search="javascript react" >item 4</li>
+
+    </ul>
+
+
 </body>
 </html>

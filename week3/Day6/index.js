@@ -1,3 +1,4 @@
+/**--changes-- */
 function changes() {
   let name = " jane doe";
   let day = "monday";
@@ -8,7 +9,7 @@ function changes() {
 function intro() {
   let change = (document.getElementById("intro").innerText = changes());
 }
-
+/**--states-- */
 function states() {
   var state = document.getElementById("adding");
   const ukCountries = 4;
@@ -17,6 +18,7 @@ function states() {
   totalRegions = ukCountries + usStates;
   return (state.innerText = "There are " + totalRegions + " states ");
 }
+/**matching  numbers*/
 
 function checkMatches() {
   var box = document.getElementById("matching");
@@ -31,6 +33,13 @@ function checkMatches() {
   }
 }
 
+
+
+
+
+
+/*--calculator js--*/
+
 function addition(a, b) {
   return a + b;
 }
@@ -40,8 +49,8 @@ function add() {
   let num1 = document.getElementById("calcInput").value;
 
   let num2 = document.getElementById("calcInputTwo").value;
-  console.log(typeof num1);
-  let a = parseInt(num1);
+  0
+  let a =  parseInt(num1);
   let b = parseInt(num2);
 
   var answear = addition(a, b);
@@ -85,7 +94,7 @@ function div() {
   var answear = division(a, b);
   box.innerHTML = answear;
 }
-
+/**name function */
 function getName(firstName, lastName) {
   return firstName + " " + lastName;
 }
