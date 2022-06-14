@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f3e9e9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.reveal {
+  height: 0;
+  opacity: 0;
+  transition: height 2.5s linear;
+  overflow: hidden;
+}
+
+.reveal:target {
+  font-size: 2em;
+  font-weight: bolder;
+  height: 15em;
+  opacity: 3;
+  box-shadow: -10px 10px rgb(126, 124, 124);
+  transition: height 2.5s linear;
+}
+
+div {
+    justify-content: center;
+  margin: 0 auto;
+  margin-right: 1em;
+  height: 15em;
+  width: 30%;
+  border: 2px solid black;
+  padding: 1em;
+}
+span {
+  font-size: 0.5em;
+}
+a {
+  background-color: rgb(219, 37, 37);
+  color: rgb(17, 16, 16);
+  margin: 5em;
+  padding: 0.5em;
+  height: 2.5em;
+  width: 5em;
+  font-size: 1em;
+  border-radius: 55%;
+  text-align: center;
+  box-shadow: -5px 10px rgb(82, 81, 81);
+}
+a:hover {
+  background-color: rgb(26, 24, 24);
+  color: rgb(240, 222, 222);
+  margin: 5em;
+  padding: 0.5em;
+  height: 2.5em;
+  width: 5em;
+  font-size: 1em;
+  border-radius: 55%;
+  text-align: center;
+  box-shadow: 5px 10px rgb(82, 81, 81);
+}
+
+.image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+}

@@ -1,0 +1,65 @@
+/* body on fullScreen do backgroundColor white */
+body {
+  background-color: white;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body :fullscreen::backdrop {
+  background-color: rgb(30, 233, 108);
+}
+nav {
+  background-color: rgb(149, 238, 245);
+  height: 20%;
+  width: 100%;
+  padding: 2em;
+}
+nav a {
+  padding: 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+#content label {
+  font-size: 20px;
+  font-weight: bold;
+}
+#content input {
+  width: 10em;
+  height: 5em;
+  font-size: 1em;
+}
+/*once button clicked  hide the button and show Exit button*/
+:fullscreen #fullscreen {
+  display: unset;
+}
+ #exitFullscreen {
+  display: none;
+}
+:fullscreen #fullscreen {
+  display: none;
+}
+:fullscreen #exitFullscreen {
+  display: unset;
+}
+section {
+  display: none;
+}
+
+.active {
+  display: block;
+}

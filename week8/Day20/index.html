@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Day 20</title>
+  </head>
+  <body>
+    <nav></nav>
+    <h1>Changing content by using browser API'S</h1>
+    <h3>Click an item above to reveal the item</h3>
+    <main >
+      <button
+        id="fullscreen"
+        onclick="this.parentNode.requestFullscreen() || 
+        this.parentNode.webkitRequestFullscreen() || 
+        this.parentNode.mozRequestFullscreen() ||
+        this.parentNode.msRequestFullscreen()"
+      >
+        Full Screen
+      </button>
+      <button id="exitFullscreen" onclick="document.exitFullscreen()  ">
+        Exit Full Screen
+      </button>
+      <div id="content">
+      <section title="content 1" id="date">
+        <h1>Date</h1>
+        <label for="date">Date</label>
+        <input type="date" />
+      </section>
+      <section title="content 2" id="time">
+        <h1>Time</h1>
+        <label for="time">Time</label>
+        <input type="time" />
+      </section>
+      <section title="content 3" id="Background-color">
+        <h1>Background-color</h1>
+        <label for="Background-color">Click to change the page colour</label>
+        <input type="color" oninput="BackgroundColorChange(this.value)" />
+      </section>
+      <section title="content 4" id="font-color">
+        <h1>Font color</h1>
+        <label for="font-color">Click to change the text colour</label>
+        <input type="color" oninput="FontColorChange(this.value)" />
+      </section>
+    </div>
+    </main>
+    <div id="inner"></div>
+    <div class="container" id="container"></div>
+    <footer>
+      <p>This is the footer</p>
+    </footer>
+  </body>
+</html>

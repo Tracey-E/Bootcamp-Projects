@@ -1,0 +1,20 @@
+[
+    {
+     " name": "PC",
+     " price": 1000,
+     " currency": " GBP",
+     " color": ["black", "white", "red", "blue"]
+    },
+    {
+     " name": "Mac",
+   "   price": 20,
+     " currency": " GBP",
+     " color": ["black", "white", "blue"]
+    },
+    {
+     " name": "iPhone",
+     " price": 50,
+     " currency": " USD",
+     " color": ["black", "red", "blue"]
+    }
+  ]

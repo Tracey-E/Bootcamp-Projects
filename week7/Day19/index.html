@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Day 19</title>
+  </head>
+  <body>
+    <h1>Day 19</h1>
+
+<div id="fetch"></div>
+
+
+
+
+
+
+  <h2>My QR Code</h2>
+    <img
+    id="code"
+      alt="qr code"
+      src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=traceye"
+    />
+    <label for="size">Size</label>
+<input name="size" type="number" onChange={upDateQrCode(this.value,value)}></input>
+ <label for="data">Data</label>
+  <input name ="data" type="text" onChange={upDateQrCode(size,this.value)}></input>
+<input type="Submit"  >
+
+
+
+<h1>Show QC data</h1>
+<section id="output">
+
+</section>
+
+  </body>
+</html>
